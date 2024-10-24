@@ -24,12 +24,12 @@ export function OverviewAnalyticsView() {
       </Typography>
 
       <Grid container spacing={3}>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={12} sm={6} md={6}>
           <AnalyticsWidgetSummary
-            title="Weekly sales"
+            title="Enjoy flights, hotels and more with Avios"
             percent={2.6}
-            total={714000}
-            icon={<img alt="icon" src="/assets/icons/glass/ic-glass-bag.svg" />}
+            subtitle='planning a holiday? That next holiday could be closer than you think. You can spend your Avios on a range of benefits such as reward flights, cabin upgrades, hotel stays, car hire and more.'
+            icon={<img alt="flight icon" src="/assets/icons/glass/ic-glass-flight.svg" style={{ width: '48px', height: '48px' }} />}
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
               series: [22, 8, 35, 50, 82, 84, 77, 12],
@@ -37,7 +37,7 @@ export function OverviewAnalyticsView() {
           />
         </Grid>
 
-        <Grid xs={12} sm={6} md={3}>
+        {/* <Grid xs={12} sm={6} md={3}>
           <AnalyticsWidgetSummary
             title="New users"
             percent={-0.1}
@@ -49,15 +49,15 @@ export function OverviewAnalyticsView() {
               series: [56, 47, 40, 62, 73, 30, 23, 54],
             }}
           />
-        </Grid>
+        </Grid> */}
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={12} sm={6} md={6}>
           <AnalyticsWidgetSummary
-            title="Purchase orders"
+            title="Enjoy 1% cashback on all eligible spend"
             percent={2.8}
-            total={1723315}
+            subtitle="As a Blue Rewards member, you can enjoy an additional 1% cashback until 30 November when you register for Cashback Rewards. whether it’s flights, hotels, or everyday purchases, we’ve got you covered!"
             color="warning"
-            icon={<img alt="icon" src="/assets/icons/glass/ic-glass-buy.svg" />}
+            icon={<img alt="credit card icon" src="/assets/icons/glass/ic-glass-credit-card.svg" style={{ width: '48px', height: '48px' }} />}
             chart={{
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
               series: [40, 70, 50, 28, 70, 75, 7, 64],
@@ -65,11 +65,14 @@ export function OverviewAnalyticsView() {
           />
         </Grid>
 
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={12} sm={12} md={12}>
           <AnalyticsWidgetSummary
-            title="Messages"
+            title="“Hi John Doe, based on your recent interest in real estate investments and sustainable funds, we have tailored a product just for you!”"
             percent={3.6}
-            total={234}
+            subtitle="1. Loan Up to £1.5M, with special rates starting at 1.9% APR."
+            subtitle1="2. Optimized for investment property purchases with flexible repayment options, designed to complement your cash flow."
+            subtitle2="3. Investment in top-rated ESG companies driving change in renewable energy and sustainability.Historical returns of 7% per annum over the last five years."
+            subtitle3="4. Invest Now: With just a few clicks, you can begin investing in the Sustainable Growth Fund or apply for the Property Investment Loan directly from your dashboard."
             color="error"
             icon={<img alt="icon" src="/assets/icons/glass/ic-glass-message.svg" />}
             chart={{

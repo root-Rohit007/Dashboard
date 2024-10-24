@@ -49,14 +49,14 @@ export function Router() {
         { path: 'blog', element: <BlogPage /> },
       ],
     },
-    {
-      path: 'sign-in',
-      element: (
-        <AuthLayout>
-          <SignInPage />
-        </AuthLayout>
-      ),
-    },
+    // {
+    //   path: 'sign-in',
+    //   element: (
+    //     <AuthLayout>
+    //       <SignInPage />
+    //     </AuthLayout>
+    //   ),
+    // },
     {
       path: '404',
       element: <Page404 />,

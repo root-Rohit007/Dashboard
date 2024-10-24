@@ -18,7 +18,11 @@ import { Chart, useChart } from 'src/components/chart';
 
 type Props = CardProps & {
   title: string;
-  total: number;
+  subtitle?: string; // Changed from total: number to subtitle: string
+  subtitle1?: string;
+  subtitle2?: string;
+  subtitle3?: string;
+  subtitle4?: string;
   percent: number;
   color?: ColorType;
   icon: React.ReactNode;
@@ -32,7 +36,11 @@ type Props = CardProps & {
 export function AnalyticsWidgetSummary({
   icon,
   title,
-  total,
+  subtitle, // Changed from total to subtitle
+  subtitle1,
+  subtitle2,
+  subtitle3,
+  subtitle4,
   chart,
   percent,
   color = 'primary',
@@ -97,8 +105,6 @@ export function AnalyticsWidgetSummary({
     >
       <Box sx={{ width: 48, height: 48, mb: 3 }}>{icon}</Box>
 
-      {renderTrending}
-
       <Box
         sx={{
           display: 'flex',
@@ -108,17 +114,21 @@ export function AnalyticsWidgetSummary({
         }}
       >
         <Box sx={{ flexGrow: 1, minWidth: 112 }}>
-          <Box sx={{ mb: 1, typography: 'subtitle2' }}>{title}</Box>
-          <Box sx={{ typography: 'h4' }}>{fShortenNumber(total)}</Box>
+          <Box sx={{ mb: 3, typography: 'h4' }}>{title}</Box>
+          {subtitle && <Box sx={{ typography: 'subtitle2' }}>{subtitle}</Box>}
+          {subtitle1 && <Box sx={{ typography: 'subtitle2' }}>{subtitle1}</Box>}
+          {subtitle2 && <Box sx={{ typography: 'subtitle2' }}>{subtitle2}</Box>}
+          {subtitle3 && <Box sx={{ typography: 'subtitle2' }}>{subtitle3}</Box>}
+          {subtitle4 && <Box sx={{ typography: 'subtitle2' }}>{subtitle4}</Box>}
         </Box>
 
-        <Chart
+        {/* <Chart
           type="line"
           series={[{ data: chart.series }]}
           options={chartOptions}
           width={84}
           height={56}
-        />
+        /> */}
       </Box>
 
       <SvgColor

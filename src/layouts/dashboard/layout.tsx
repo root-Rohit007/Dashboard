@@ -83,7 +83,7 @@ export function DashboardLayout({ sx, children, header }: DashboardLayoutProps) 
                 <Searchbar />
                 <LanguagePopover data={_langs} />
                 <NotificationsPopover data={_notifications} />
-                <AccountPopover
+                {/* <AccountPopover
                   data={[
                     {
                       label: 'Home',
@@ -101,7 +101,7 @@ export function DashboardLayout({ sx, children, header }: DashboardLayoutProps) 
                       icon: <Iconify width={22} icon="solar:settings-bold-duotone" />,
                     },
                   ]}
-                />
+                /> */}
               </Box>
             ),
           }}

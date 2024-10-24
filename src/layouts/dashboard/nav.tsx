@@ -1,12 +1,14 @@
 import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 
 import { useEffect } from 'react';
-
+import { Iconify } from 'src/components/iconify'; // Adjust the path as necessary
 import Box from '@mui/material/Box';
 import ListItem from '@mui/material/ListItem';
 import { useTheme } from '@mui/material/styles';
 import ListItemButton from '@mui/material/ListItemButton';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
+import { Card, Typography } from '@mui/material';
+import Button from '@mui/material/Button';
 
 import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
@@ -20,6 +22,8 @@ import { NavUpgrade } from '../components/nav-upgrade';
 import { WorkspacesPopover } from '../components/workspaces-popover';
 
 import type { WorkspacesPopoverProps } from '../components/workspaces-popover';
+
+
 
 // ----------------------------------------------------------------------
 
@@ -119,13 +123,105 @@ export function NavContent({ data, slots, workspaces, sx }: NavContentProps) {
 
   return (
     <>
-      <Logo />
+      {/* Logo */}
+      <Box display="flex" justifyContent="space-evenly" alignItems="center" my={2}>
+        <Box
+          component="img"
+          src="/assets/icons/Eagle_RGB_Cyan_Large.svg"
+          alt="Eagle Logo"
+          sx={{
+            width: 24,
+            height: 24,
+          }}
+        />
+
+        <Typography variant="h4" color="var(--layout-nav-item-color)">Personal Banking</Typography>
+      </Box>
+
+
 
       {slots?.topArea}
 
-      <WorkspacesPopover data={workspaces} sx={{ my: 2 }} />
+      <Box display="flex" flexDirection="column" alignItems="center" my={2}>
+        <Box
+          component="img"
+          src="https://randomuser.me/api/portraits/men/10.jpg"
+          alt="Profile Picture"
+          sx={{
+            width: 120,
+            height: 120,
+            borderRadius: '50%',
+            objectFit: 'cover',
+          }}
+        />
+        <Box component="span" mt={1} sx={{ typography: 'h6', color: 'var(--layout-nav-item-color)' }}>
+          John Doe
+        </Box>
+      </Box>
 
-      <Scrollbar fillContent>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        my={2}
+        p={2}
+        sx={{
+          border: '1px solid',
+          borderColor: 'divider',
+          borderRadius: 1,
+          bgcolor: 'background.paper',
+          width: '100%',
+        }}
+      >
+        <Typography variant="h6" gutterBottom>
+          Chat with AI
+        </Typography>
+        <Box
+          component="div"
+          sx={{
+            width: '100%',
+            p: 1,
+            borderRadius: 1,
+            borderColor: 'divider',
+            bgcolor: 'background.default',
+            color: 'text.primary',
+            minHeight: '50px',
+            mb: 2,
+          }}
+        >
+          {/* This is where the AI response will be displayed */}
+        </Box>
+        <Box
+          component="textarea"
+          placeholder="Type your message..."
+          rows={2}
+          sx={{
+            width: '100%',
+            p: 1,
+            borderRadius: 1,
+            borderColor: 'divider',
+            bgcolor: 'background.default',
+            color: 'text.primary',
+            '&:focus': {
+              outline: 'none',
+              borderColor: 'primary.main',
+            },
+          }}
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ mt: 2, alignSelf: 'flex-end' }}
+        >
+          Send
+        </Button>
+      </Box>
+
+
+
+      {/* <WorkspacesPopover data={workspaces} sx={{ my: 2 }} /> */}
+
+      {/* <Scrollbar fillContent>
         <Box component="nav" display="flex" flex="1 1 auto" flexDirection="column" sx={sx}>
           <Box component="ul" gap={0.5} display="flex" flexDirection="column">
             {data.map((item) => {
@@ -172,11 +268,56 @@ export function NavContent({ data, slots, workspaces, sx }: NavContentProps) {
             })}
           </Box>
         </Box>
-      </Scrollbar>
+      </Scrollbar> */}
+
+      <Card variant='outlined' sx={{
+        width: { xs: '100%', sm: '100%' },  // Full width on mobile, half width on larger screens
+        minWidth: { xs: 'auto', sm: 200 },  // Allow full width on mobile
+        p: 2,
+        mb: { xs: 2, sm: 0 },  // Add bottom margin on mobile for spacing
+        backgroundImage: 'url(https://picsum.photos/800/600)',  // Fetch a random image from Picsum
+        backgroundSize: 'cover',  // Ensure the image covers the entire card
+        backgroundPosition: 'center',  // Center the image
+        color: 'white',  // Change text color for better contrast
+        position: 'relative',  // Ensure positioning context
+        overflow: 'hidden',  // Hide overflow to ensure image visibility
+      }}>
+        <Box sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',  // Add a semi-transparent overlay for better text contrast
+        }} />
+        <Typography variant="subtitle2" sx={{ mb: 1, position: 'relative', zIndex: 1 }}>
+          Introducing The Amazon Barclaycard
+        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, position: 'relative', zIndex: 1 }}>
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/amazon.png" alt="Amazon" style={{ width: 48, height: 48 }} />
+
+
+          <Button
+            size="large"
+            variant="text"
+            sx={{ minWidth: 'auto', p: 0 }}
+          >
+            <Iconify icon="logos:visa" style={{ width: 48, height: 48 }} />
+          </Button>
+        </Box>
+        <Typography variant="body2" sx={{ position: 'relative', zIndex: 1 }}>
+          **** **** **** 3456
+        </Typography>
+      </Card>
+
+
+
 
       {slots?.bottomArea}
 
-      <NavUpgrade />
+
+
+      {/* <NavUpgrade /> */}
     </>
   );
 }
