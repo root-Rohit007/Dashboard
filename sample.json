@@ -1,0 +1,352 @@
+browsing history 
+{
+  "related_party_id": "RP12345",
+  "customer_id": "C12345",
+  "browsing_history": [
+    {
+      "date": "2024-11-03",
+      "time_spent_seconds": 600,
+      "category": "Investments",
+      "website": "example-investment-platform.com",
+      "search_keywords": ["wealth management", "investment options"]
+    },
+    {
+      "date": "2024-11-02",
+      "time_spent_seconds": 300,
+      "category": "Luxury Goods",
+      "website": "luxury-goods-store.com",
+      "search_keywords": ["high-end watches", "luxury gifts"]
+    },
+    {
+      "date": "2024-11-01",
+      "time_spent_seconds": 450,
+      "category": "Travel",
+      "website": "luxury-travel-agency.com",
+      "search_keywords": ["exclusive resorts", "private jet charters"]
+    },
+    {
+      "date": "2024-10-30",
+      "time_spent_seconds": 720,
+      "category": "Investments",
+      "website": "financial-news.com",
+      "search_keywords": ["market trends", "top stocks 2024"]
+    },
+    {
+      "date": "2024-10-29",
+      "time_spent_seconds": 360,
+      "category": "Real Estate",
+      "website": "premium-properties.com",
+      "search_keywords": ["luxury apartments", "real estate investments"]
+    },
+    {
+      "date": "2024-10-28",
+      "time_spent_seconds": 540,
+      "category": "Philanthropy",
+      "website": "charity-organization.com",
+      "search_keywords": ["charitable foundations", "impact investing"]
+    },
+    {
+      "date": "2024-10-27",
+      "time_spent_seconds": 480,
+      "category": "Health & Wellness",
+      "website": "wellness-retreats.com",
+      "search_keywords": ["luxury wellness retreats", "health investments"]
+    },
+    {
+      "date": "2024-10-26",
+      "time_spent_seconds": 300,
+      "category": "Technology",
+      "website": "latest-tech-gadgets.com",
+      "search_keywords": ["smart home devices", "technology investments"]
+    },
+    {
+      "date": "2024-10-25",
+      "time_spent_seconds": 390,
+      "category": "Lifestyle",
+      "website": "fine-dining-restaurants.com",
+      "search_keywords": ["gourmet dining", "fine wine"]
+    },
+    {
+      "date": "2024-10-24",
+      "time_spent_seconds": 720,
+      "category": "Education",
+      "website": "executive-education.com",
+      "search_keywords": ["leadership courses", "business schools"]
+    }
+  ]
+}
+
+{
+  "customer_id": "C12345",
+  "name": "John Doe",
+  "net_worth": 10000000,
+  "accounts": [
+    {
+      "account_type": "Savings",
+      "balance": 500000,
+      "currency": "USD",
+      "interest_rate": 1.5,
+      "account_number": "SAV-987654321"
+    },
+    {
+      "account_type": "Investments",
+      "balance": 9500000,
+      "currency": "USD",
+      "investment_portfolio": [
+        { "type": "Stocks", "value": 7000000, "risk_profile": "high" },
+        { "type": "Bonds", "value": 2000000, "risk_profile": "low" },
+        { "type": "Real Estate", "value": 500000, "risk_profile": "medium" }
+      ]
+    },
+    {
+      "account_type": "Retirement",
+      "balance": 1500000,
+      "currency": "USD",
+      "contributions": {
+        "annual_limit": 19500,
+        "current_contribution": 50000
+      },
+      "account_number": "RET-123456789"
+    },
+    {
+      "account_type": "Checking",
+      "balance": 200000,
+      "currency": "USD",
+      "account_number": "CHK-321654987"
+    }
+  ],
+  "recent_activity": [
+    { "type": "Investment", "date": "2024-11-01", "amount": 100000, "description": "Tech stock purchase" },
+    { "type": "Withdrawal", "date": "2024-10-30", "amount": 5000, "description": "Charity donation" },
+    { "type": "Deposit", "date": "2024-10-28", "amount": 20000, "description": "Salary deposit" },
+    { "type": "Transfer", "date": "2024-10-20", "amount": 100000, "description": "Transfer to investment account" },
+    { "type": "Withdrawal", "date": "2024-10-15", "amount": 15000, "description": "Luxury vacation" }
+  ],
+  "contact_information": {
+    "email": "john.doe@example.com",
+    "phone": "+1234567890",
+    "address": {
+      "street": "123 Wealth Ave",
+      "city": "Richmond",
+      "state": "VA",
+      "zip": "23220",
+      "country": "USA"
+    }
+  },
+  "preferences": {
+    "communication_method": "email",
+    "newsletter_subscription": true,
+    "preferred_language": "English"
+  }
+}
+
+
+———————
+Persona
+
+
+ "recommended_products": [
+      {
+        "product_name": "Wealth Management Services",
+        "description": "Personalized investment strategies and portfolio management for high-net-worth clients.",
+        "annual_fee": 15000,
+        "minimum_investment": 1000000
+      },
+      {
+        "product_name": "Luxury Credit Card",
+        "description": "Exclusive credit card with premium rewards, travel perks, and concierge services.",
+        "annual_fee": 500,
+        "credit_limit": 100000
+      },
+      {
+        "product_name": "Real Estate Investment Trust (REIT)",
+        "description": "Invest in a diversified portfolio of real estate assets with potential for high returns.",
+        "minimum_investment": 25000,
+        "annual_return": 8
+      },
+      {
+        "product_name": "Retirement Income Fund",
+        "description": "A fund designed to provide a steady income during retirement, with a mix of bonds and equities.",
+        "minimum_investment": 100000,
+        "expected_annual_return": 5
+      },
+      {
+        "product_name": "Charitable Giving Fund",
+        "description": "Facilitate charitable contributions with tax benefits, tailored for philanthropic clients.",
+        "minimum_contribution": 10000
+      }
+    ]
+  }
+
+————————————————
+Complete Json
+
+{
+  "persona": {
+    "related_party_id": "RP12345",
+    "customer_id": "C12345",
+    "name": "John Doe",
+    "net_worth": 10000000,
+    "browsing_history": [
+      {
+        "date": "2024-11-03",
+        "time_spent_seconds": 600,
+        "category": "Investments",
+        "website": "example-investment-platform.com",
+        "search_keywords": ["wealth management", "investment options"]
+      },
+      {
+        "date": "2024-11-02",
+        "time_spent_seconds": 300,
+        "category": "Luxury Goods",
+        "website": "luxury-goods-store.com",
+        "search_keywords": ["high-end watches", "luxury gifts"]
+      },
+      {
+        "date": "2024-11-01",
+        "time_spent_seconds": 450,
+        "category": "Travel",
+        "website": "luxury-travel-agency.com",
+        "search_keywords": ["exclusive resorts", "private jet charters"]
+      },
+      {
+        "date": "2024-10-30",
+        "time_spent_seconds": 720,
+        "category": "Investments",
+        "website": "financial-news.com",
+        "search_keywords": ["market trends", "top stocks 2024"]
+      },
+      {
+        "date": "2024-10-29",
+        "time_spent_seconds": 360,
+        "category": "Real Estate",
+        "website": "premium-properties.com",
+        "search_keywords": ["luxury apartments", "real estate investments"]
+      },
+      {
+        "date": "2024-10-28",
+        "time_spent_seconds": 540,
+        "category": "Philanthropy",
+        "website": "charity-organization.com",
+        "search_keywords": ["charitable foundations", "impact investing"]
+      },
+      {
+        "date": "2024-10-27",
+        "time_spent_seconds": 480,
+        "category": "Health & Wellness",
+        "website": "wellness-retreats.com",
+        "search_keywords": ["luxury wellness retreats", "health investments"]
+      },
+      {
+        "date": "2024-10-26",
+        "time_spent_seconds": 300,
+        "category": "Technology",
+        "website": "latest-tech-gadgets.com",
+        "search_keywords": ["smart home devices", "technology investments"]
+      },
+      {
+        "date": "2024-10-25",
+        "time_spent_seconds": 390,
+        "category": "Lifestyle",
+        "website": "fine-dining-restaurants.com",
+        "search_keywords": ["gourmet dining", "fine wine"]
+      },
+      {
+        "date": "2024-10-24",
+        "time_spent_seconds": 720,
+        "category": "Education",
+        "website": "executive-education.com",
+        "search_keywords": ["leadership courses", "business schools"]
+      }
+    ],
+    "accounts": [
+      {
+        "account_type": "Savings",
+        "balance": 500000,
+        "currency": "USD",
+        "interest_rate": 1.5,
+        "account_number": "SAV-987654321"
+      },
+      {
+        "account_type": "Investments",
+        "balance": 9500000,
+        "currency": "USD",
+        "investment_portfolio": [
+          { "type": "Stocks", "value": 7000000, "risk_profile": "high" },
+          { "type": "Bonds", "value": 2000000, "risk_profile": "low" },
+          { "type": "Real Estate", "value": 500000, "risk_profile": "medium" }
+        ]
+      },
+      {
+        "account_type": "Retirement",
+        "balance": 1500000,
+        "currency": "USD",
+        "contributions": {
+          "annual_limit": 19500,
+          "current_contribution": 50000
+        },
+        "account_number": "RET-123456789"
+      },
+      {
+        "account_type": "Checking",
+        "balance": 200000,
+        "currency": "USD",
+        "account_number": "CHK-321654987"
+      }
+    ],
+    "recent_activity": [
+      { "type": "Investment", "date": "2024-11-01", "amount": 100000, "description": "Tech stock purchase" },
+      { "type": "Withdrawal", "date": "2024-10-30", "amount": 5000, "description": "Charity donation" },
+      { "type": "Deposit", "date": "2024-10-28", "amount": 20000, "description": "Salary deposit" },
+      { "type": "Transfer", "date": "2024-10-20", "amount": 100000, "description": "Transfer to investment account" },
+      { "type": "Withdrawal", "date": "2024-10-15", "amount": 15000, "description": "Luxury vacation" }
+    ],
+    "contact_information": {
+      "email": "john.doe@example.com",
+      "phone": "+1234567890",
+      "address": {
+        "street": "123 Wealth Ave",
+        "city": "Richmond",
+        "state": "VA",
+        "zip": "23220",
+        "country": "USA"
+      }
+    },
+    "preferences": {
+      "communication_method": "email",
+      "newsletter_subscription": true,
+      "preferred_language": "English"
+    },
+    "recommended_products": [
+      {
+        "product_name": "Wealth Management Services",
+        "description": "Personalized investment strategies and portfolio management for high-net-worth clients.",
+        "annual_fee": 15000,
+        "minimum_investment": 1000000
+      },
+      {
+        "product_name": "Luxury Credit Card",
+        "description": "Exclusive credit card with premium rewards, travel perks, and concierge services.",
+        "annual_fee": 500,
+        "credit_limit": 100000
+      },
+      {
+        "product_name": "Real Estate Investment Trust (REIT)",
+        "description": "Invest in a diversified portfolio of real estate assets with potential for high returns.",
+        "minimum_investment": 25000,
+        "annual_return": 8
+      },
+      {
+        "product_name": "Retirement Income Fund",
+        "description": "A fund designed to provide a steady income during retirement, with a mix of bonds and equities.",
+        "minimum_investment": 100000,
+        "expected_annual_return": 5
+      },
+      {
+        "product_name": "Charitable Giving Fund",
+        "description": "Facilitate charitable contributions with tax benefits, tailored for philanthropic clients.",
+        "minimum_contribution": 10000
+      }
+    ]
+  }
+}
